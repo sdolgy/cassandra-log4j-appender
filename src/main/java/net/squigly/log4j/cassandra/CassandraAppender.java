@@ -85,13 +85,11 @@ public class CassandraAppender extends AppenderSkeleton implements Appender {
 	      flushBuffer();		
 	}
 	
-	protected void execute(String msg) {
-
+	protected void save(LoggingEvent logEvent) {
 		keyspace = getCassandraKeyspace();
 		Mutator<String> m = HFactory.createMutator(keyspace, ss);
-		m.addInsertion("log", cassandraColumnFamily, HFactory.createColumn(System.nanoTime(), msg, ls, ss));
+		m.addInsertion(logEvent.getLoggerName(), cassandraColumnFamily, HFactory.createColumn(System.nanoTime(), getLogStatement(logEvent), ls, ss));
 		m.execute();
-				
 	}	
 	
 	public void flushBuffer() {
@@ -99,8 +97,7 @@ public class CassandraAppender extends AppenderSkeleton implements Appender {
 		removes.ensureCapacity(buffer.size());
 		for (Iterator<LoggingEvent> i = buffer.iterator(); i.hasNext();) {
 				LoggingEvent logEvent = (LoggingEvent)i.next();
-				String sql = getLogStatement(logEvent);
-				execute(sql);
+				save(logEvent);
 				removes.add(logEvent);
 		}
 		    
