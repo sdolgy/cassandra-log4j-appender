@@ -1,20 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.squigly.cassandra</groupId>
-  <artifactId>cassandra-slf4j-logger</artifactId>
+  <artifactId>cassandra-log4j-appender</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Sasha Dolgy</name>
-  <description>Custom SLF4J Logger adapter to Apache Cassandra</description>
-  <url>https://github.com/sdolgy/cassandra-slf4j-logger</url>
+  <description>Custom Log4j Appender to Apache Cassandra</description>
+  <url>https://github.com/sdolgy/cassandra-log4j-appender</url>
   <organization>
-  	<name>Squigly Media Corporation</name>
-  	<url>http://www.squigly.net/</url>
+    <name>Squigly Media Corporation</name>
+    <url>http://www.squigly.net/</url>
   </organization>
   <dependencies>
-  	<dependency>
-  		<groupId>org.slf4j</groupId>
-  		<artifactId>slf4j-api</artifactId>
-  		<version>1.6.4</version>
-  	</dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.6.4</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>1.6.4</version>
+    </dependency>
+        <dependency>
+            <groupId>me.prettyprint</groupId>
+            <artifactId>hector-core</artifactId>
+            <version>1.0-3</version>
+        </dependency>    
   </dependencies>
 </project>
