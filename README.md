@@ -1,7 +1,7 @@
-cassandra-slf4j-logger
-======================
+cassandra-log4j-appender
+========================
 
-My attempt at a custom slf4j logger with Apache Cassandra as the backend
+My attempt at a custom log4j appender for use with Apache Cassandra as the backend
 
 Questions?  Comments?  http://twitter.com/sdolgy
 
@@ -14,4 +14,4 @@ Contributing
 4. Create an [Issue][1] with a link to your branch
 
 
-[1]: https://github.com/sdolgy/cassandra-slf4j-logger
+[1]: https://github.com/sdolgy/cassandra-log4j-appender
