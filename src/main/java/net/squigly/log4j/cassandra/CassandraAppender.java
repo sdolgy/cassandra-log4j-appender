@@ -68,7 +68,6 @@ public class CassandraAppender extends AppenderSkeleton implements Appender {
 		return true;
 	}
 
-	@Override
 	protected void append(LoggingEvent event) {
 	    event.getNDC();
 	    event.getThreadName();
