@@ -15,3 +15,9 @@ Contributing
 
 
 [1]: https://github.com/sdolgy/cassandra-log4j-appender
+
+
+Inspiration
+-----------
+
+- http://svn.apache.org/repos/asf/logging/log4j/tags/v1_2_16/src/main/java/org/apache/log4j/jdbc/JDBCAppender.java
