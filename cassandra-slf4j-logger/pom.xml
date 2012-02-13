@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.squigly.cassandra</groupId>
+  <artifactId>cassandra-slf4j-logger</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Sasha Dolgy</name>
+  <description>Custom SLF4J Logger adapter to Apache Cassandra</description>
+  <url>https://github.com/sdolgy/cassandra-slf4j-logger</url>
+  <organization>
+  	<name>Squigly Media Corporation</name>
+  	<url>http://www.squigly.net/</url>
+  </organization>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.slf4j</groupId>
+  		<artifactId>slf4j-api</artifactId>
+  		<version>1.6.4</version>
+  	</dependency>
+  </dependencies>
+</project>
